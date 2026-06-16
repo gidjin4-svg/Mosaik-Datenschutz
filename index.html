@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mosaik – Datenschutzerklärung</title>
-  <!-- TODO vor Veröffentlichung: [Name] und [Kontakt-E-Mail] unten ausfüllen, Stand-Datum prüfen. -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -54,6 +53,19 @@
     a { color: var(--accent); }
     footer { text-align: center; color: var(--muted); font-size: 14px; margin-top: 28px; }
     code { background: var(--bg); padding: 1px 6px; border-radius: 6px; }
+    label { display: block; font-weight: 700; font-size: 14px; margin-top: 12px; }
+    input, textarea {
+      width: 100%; font-family: inherit; font-size: 16px; color: var(--text);
+      background: var(--bg); border: 1px solid var(--border); border-radius: 12px;
+      padding: 12px 14px; margin-top: 6px;
+    }
+    textarea { min-height: 120px; resize: vertical; }
+    button {
+      margin-top: 14px; background: var(--accent); color: #fff; border: none;
+      border-radius: 12px; padding: 14px 22px; font-weight: 800; font-size: 16px; cursor: pointer;
+    }
+    button:hover { background: #C46F49; }
+    .form-note { font-size: 13px; color: var(--muted); margin-top: 10px; }
   </style>
 </head>
 <body>
@@ -71,8 +83,8 @@
 
     <div class="card">
       <h2><span class="dot"></span>Verantwortlicher</h2>
-      <p>[Name eintragen]<br />
-      Kontakt: <a href="mailto:[Kontakt-E-Mail eintragen]">[Kontakt-E-Mail eintragen]</a></p>
+      <p>Oliver Gideon Leif<br />
+      Kontakt: <a href="mailto:gidjin4@googlemail.com">gidjin4@googlemail.com</a></p>
     </div>
 
     <div class="card">
@@ -114,6 +126,32 @@
       <p>Da alle Daten nur lokal auf deinem Gerät liegen, hast du die volle Kontrolle. Du kannst sie jederzeit
       in der App entfernen oder durch <strong>Deinstallieren der App</strong> vollständig löschen. Bei Fragen
       erreichst du uns unter der oben genannten Adresse.</p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Mosaik unterstützen</h2>
+      <p>Mosaik ist gratis und werbefrei und wird in der Freizeit entwickelt. Wenn dir die App hilft,
+      freue ich mich über eine kleine Spende – das hält die Entwicklung am Laufen.</p>
+      <p><a href="https://ko-fi.com/mosaikapp">→ Mosaik unterstützen</a></p>
+    </div>
+
+    <div class="card">
+      <h2><span class="dot"></span>Kontakt</h2>
+      <p class="muted">Fragen, Feedback oder ein Problem? Schreib mir – ich freue mich.</p>
+      <form action="https://formsubmit.co/gidjin4@googlemail.com" method="POST">
+        <input type="hidden" name="_subject" value="Mosaik – Kontaktanfrage" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="text" name="_honey" style="display:none" />
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name" placeholder="Dein Name" required />
+        <label for="email">E-Mail</label>
+        <input id="email" type="email" name="email" placeholder="deine@email.de" required />
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" placeholder="Deine Nachricht …" required></textarea>
+        <button type="submit">Senden</button>
+      </form>
+      <p class="form-note">Das Formular wird über den Dienst FormSubmit verarbeitet und als E-Mail an
+      uns weitergeleitet. Es werden nur die von dir eingegebenen Angaben übertragen.</p>
     </div>
 
     <footer>
